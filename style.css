@@ -2,29 +2,101 @@
     background-color: rgb(255, 178, 11);
 }
 
+.title{
+  text-align: center;
+  font-family: 'DM Serif Text', serif;
+  font-size: 10vw;
+  font-style: normal;
+}
+
 .row {
-    
     display: flex;
-    width: 80%;
+    width: 85%;
     margin-left: 5%;
-    border: solid rgb(219, 134, 100) 10px;
+    border: solid rgba(219, 134, 100, 0.301) 5px;
     border-radius: 50px;
-    padding: 5%;
-    
+    padding: 2.5%;
+    background-color: rgba(240, 104, 25, 0);
   }
   
-  .column {
-    background-color: rgb(228, 114, 114);
-    border-radius: 50px;
+.column {
+    background-color: rgba(228, 114, 114, 0.205);
+    border-radius: 30px;
     padding: 5%;
-    flex: 50%;
-    height: 400px;
+    margin: 2%;
+    flex: 40%;
+    overflow: scroll;
+}
+
+.innerText{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7vw;
+    background-color: rgba(65, 105, 225, 0);
+    color: rgb(0, 0, 0)
+}
+
+#subHead{
+  text-align: center;
+  margin: 10vw;
+}
+
+
+.link{
+    background-color: rgb(228, 114, 114,0);
+    color: rgb(0, 0, 0);
+    font-family: 'DM Serif Text', serif;
+    text-decoration: none;
+    font-size: 6vw;
   }
 
-  .link{
-    background-color: rgb(228, 114, 114);
-    color: rgb(248, 217, 151);
-    font-family: 'Pacifico', cursive;
-    font-style: normal;
-    font-size: 3rem;
+  .link:hover{
+    animation-name: linkChange;
+    animation-duration: 0.7s;
+    color: rgb(255, 208, 77);
   }
+
+  /* .link:not(:hover){
+    
+  } */
+
+  .column:hover{
+    animation-name: columnChange;
+    animation-duration: 0.6s;
+    border-radius: 100px;
+    background-color:  rgb(102, 143, 253);
+}
+
+
+  .column:not(:hover){
+    animation-name: colChangingBack;
+    animation-duration: 0.9s;
+    border-radius: 50px;
+    color:rgb(0, 0, 0)
+  }
+
+
+@keyframes columnChange {
+  from{border-radius: 50px;}
+  to{border-radius: 100px;}
+  from {background-color: rgba(2, 0, 133, 0.205);}
+  to {background-color:  rgb(102, 143, 253);}
+}
+
+@keyframes linkChange{
+  from{color: rgb(0, 0, 0);}
+  to{color: rgb(255, 208, 77);}
+}
+
+@keyframes colChangingBack{
+  from{border-radius: 100px;}
+  to{border-radius: 50px;}
+  from{color:rgb(102, 143, 253);}
+  to{color: rgba(2, 0, 133, 0.205);}
+}
+
+
+.pic{
+  height: 20vw;
+}
+
+
