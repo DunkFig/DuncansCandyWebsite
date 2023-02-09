@@ -1,102 +1,65 @@
-*{
-    background-color: rgb(255, 178, 11);
+html{
+  font-size: 16px;
+  background-color: rgb(255, 214, 100);
 }
 
-.title{
+h1{
+  font-family:  'Montserrat', sans-serif;
+  font-size: 4rem;
   text-align: center;
-  font-family: 'DM Serif Text', serif;
-  font-size: 10vw;
-  font-style: normal;
-}
-
-.row {
-    display: flex;
-    width: 85%;
-    margin-left: 5%;
-    border: solid rgba(219, 134, 100, 0.301) 5px;
-    border-radius: 50px;
-    padding: 2.5%;
-    background-color: rgba(240, 104, 25, 0);
-  }
+  line-height: 2.8rem;
+  color: rgb(0, 0, 0);
   
-.column {
-    background-color: rgba(228, 114, 114, 0.205);
-    border-radius: 30px;
-    padding: 5%;
-    margin: 2%;
-    flex: 40%;
-    overflow: scroll;
 }
 
-.innerText{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.7vw;
-    background-color: rgba(65, 105, 225, 0);
-    color: rgb(0, 0, 0)
+#container{
+  width: auto;
 }
 
-#subHead{
-  text-align: center;
-  margin: 10vw;
+#main #icons{
+  visibility: hidden;
+}
+
+.innerDiv{
+  background: rgb(208, 235, 198);
+  box-shadow: rgb(223, 241, 119) 15px 15px;
+  margin-left: 2.5%;
+  margin-top: 2rem;
+  padding: 0.8rem;
+  width: 82%;
+  height: auto;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  
 }
 
 
-.link{
-    background-color: rgb(228, 114, 114,0);
-    color: rgb(0, 0, 0);
-    font-family: 'DM Serif Text', serif;
-    text-decoration: none;
-    font-size: 6vw;
+@media screen and (min-width: 645px) {
+  html{
+    font-size: 24px;
   }
+}
 
-  .link:hover{
-    animation-name: linkChange;
-    animation-duration: 0.7s;
-    color: rgb(255, 208, 77);
+@media screen and (min-width: 1000px) {
+    html{
+      font-size: 32px;
+      
+    }
+    #container{
+      width: 50%;
+      float: left;
+      margin-left: 2%;
+    }
+
+   #main #icons{
+      visibility: visible;
+      width: 35%;
+      position: relative;
+      float: right;
+      font-size: 5rem;
+    }
+
+    #main{
+      margin-left: 2rem;
+    }
   }
-
-  /* .link:not(:hover){
-    
-  } */
-
-  .column:hover{
-    animation-name: columnChange;
-    animation-duration: 0.6s;
-    border-radius: 100px;
-    background-color:  rgb(102, 143, 253);
-}
-
-
-  .column:not(:hover){
-    animation-name: colChangingBack;
-    animation-duration: 0.9s;
-    border-radius: 50px;
-    color:rgb(0, 0, 0)
-  }
-
-
-@keyframes columnChange {
-  from{border-radius: 50px;}
-  to{border-radius: 100px;}
-  from {background-color: rgba(2, 0, 133, 0.205);}
-  to {background-color:  rgb(102, 143, 253);}
-}
-
-@keyframes linkChange{
-  from{color: rgb(0, 0, 0);}
-  to{color: rgb(255, 208, 77);}
-}
-
-@keyframes colChangingBack{
-  from{border-radius: 100px;}
-  to{border-radius: 50px;}
-  from{color:rgb(102, 143, 253);}
-  to{color: rgba(2, 0, 133, 0.205);}
-}
-
-
-.pic{
-  height: 20vw;
-}
-
-
